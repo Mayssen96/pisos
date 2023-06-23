@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="Rate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.gui.CommentaireController">
+   <children>
+      <VBox layoutX="26.0" layoutY="34.0" prefHeight="200.0" prefWidth="111.0">
+         <children>
+            <Label prefHeight="48.0" prefWidth="115.0" text="Contenue">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label prefHeight="48.0" prefWidth="115.0" text="Utilisateur">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label prefHeight="48.0" prefWidth="115.0" text="Nom du blog">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox layoutX="205.0" layoutY="34.0" prefHeight="234.0" prefWidth="245.0" spacing="20.0">
+         <children>
+            <TextField fx:id="tfidContenue" opacity="0.95" />
+            <ComboBox fx:id="comboUtilisateur" prefHeight="31.0" prefWidth="306.0" promptText="Utilisateur" styleClass="combo-box-transparent" stylesheets="@style.css" />
+            <ComboBox fx:id="blogCombo" prefHeight="31.0" prefWidth="261.0" promptText="Blog" styleClass="combo-box-transparent" stylesheets="@style.css">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor></ComboBox>
+         </children>
+      </VBox>
+      <Button fx:id="btnSuppComm" layoutX="855.0" layoutY="34.0" mnemonicParsing="false" onAction="#deletComm" opacity="0.95" styleClass="btnYellow" stylesheets="@style.css" text="Supprimer" />
+      <Button fx:id="btnModifcomm" layoutX="702.0" layoutY="34.0" mnemonicParsing="false" onAction="#modifierComm" opacity="0.95" prefHeight="31.0" prefWidth="89.0" styleClass="btnYellow" stylesheets="@style.css" text="Modifier" />
+      <TableView fx:id="infocommentaires" layoutX="565.0" layoutY="123.0" onMouseClicked="#renderComBlog" opacity="0.8" prefHeight="512.0" prefWidth="378.0" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="colContenue" prefWidth="156.0" text="Contenue" />
+            <TableColumn fx:id="colidUtilisateur" minWidth="0.0" prefWidth="218.0" text="Utilisateur" />
+        </columns>
+      </TableView>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+      <Button fx:id="btnBackToBlog" layoutX="6.0" layoutY="635.0" mnemonicParsing="false" onAction="#goToBlogInterface" styleClass="btnYellow" text="Retour" />
+      <Button fx:id="btnAjouterComm" layoutX="566.0" layoutY="34.0" mnemonicParsing="false" onAction="#AddComm" opacity="0.95" prefHeight="31.0" prefWidth="77.0" styleClass="btnYellow" stylesheets="@style.css" text="Ajouter" />
+   </children>
+   <styleClass>
+      <String fx:value="column-header" />
+      <String fx:value="interface2" />
+   </styleClass>
+</AnchorPane>

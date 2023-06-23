@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" fx:id="rate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.gui.BlogController">
+   <children>
+      <Accordion />
+      <Button fx:id="btnModifier" layoutX="1020.0" layoutY="582.0" mnemonicParsing="false" onAction="#modifierBlog" prefHeight="30.0" prefWidth="76.0" styleClass="btnYellow" stylesheets="@style.css" text="Modifier">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAjouter" graphicTextGap="10.0" layoutX="441.0" layoutY="580.0" mnemonicParsing="false" onAction="#ajouterBlog" prefHeight="34.0" prefWidth="84.0" styleClass="btnYellow" stylesheets="@style.css" text="Ajouter ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <VBox layoutX="9.0" layoutY="93.0" prefHeight="175.0" prefWidth="207.0" spacing="15.0" styleClass="text" stylesheets="@style.css">
+         <children>
+            <Label stylesheets="@style.css" text="Titre ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label stylesheets="@style.css" text="Description">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label styleClass="text" stylesheets="@style.css" text="utilisateur">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox layoutX="101.0" layoutY="75.0" prefHeight="116.0" prefWidth="199.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfTitre" prefHeight="31.0" prefWidth="158.0" stylesheets="@style.css" />
+            <TextField fx:id="tfDescription" prefHeight="17.0" prefWidth="199.0" />
+            <ComboBox fx:id="userBlogCombo" prefHeight="47.0" prefWidth="199.0" promptText="utilisateur" stylesheets="@style.css" />
+         </children>
+      </VBox>
+      <TableView fx:id="information" layoutX="434.0" layoutY="76.0" onMouseClicked="#getselectedblog" opacity="0.66" prefHeight="489.0" prefWidth="662.0" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="colidutilisateur" prefWidth="170.0" text="Utilisateur" />
+            <TableColumn fx:id="cotitre" minWidth="0.0" prefWidth="113.0" text="Titre " />
+            <TableColumn fx:id="coldesc" prefWidth="205.0" text="Description" />
+            <TableColumn fx:id="colAll" prefWidth="172.0" text="Actions" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfSearchBox" layoutX="434.0" layoutY="35.0" prefHeight="31.0" prefWidth="354.0" styleClass="filler" stylesheets="@style.css" />
+      <Label layoutX="326.0" layoutY="40.0" prefHeight="21.0" prefWidth="100.0" stylesheets="@style.css" text="Rechercher ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Rating fx:id="Rate" layoutX="627.0" layoutY="690.0" styleClass="text" />
+      <Label fx:id="labelRate" graphicTextGap="6.0" layoutX="565.0" layoutY="635.0" prefHeight="61.0" prefWidth="300.0" text="Click on the blog and rate it !">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

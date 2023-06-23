@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.gui.TableRatesController">
+   <TableView fx:id="tableviewRate" layoutX="537.0" layoutY="22.0" opacity="0.66" prefHeight="515.0" prefWidth="697.0" stylesheets="@style.css">
+      <columns>
+         <TableColumn fx:id="colBlogName" prefWidth="215.0" text="Nom Blog" />
+         <TableColumn fx:id="colNomUtilisateur" prefWidth="238.0" text="Nom utilisateur" />
+         <TableColumn fx:id="colRate" prefWidth="235.0" text="rating" />
+      </columns>
+      <styleClass>
+         <String fx:value="table-view" />
+         <String fx:value="table-row-cell" />
+      </styleClass>
+   </TableView>
+   <Button fx:id="retourBtn" layoutX="14.0" layoutY="485.0" mnemonicParsing="false" onAction="#backToB" opacity="0.85" styleClass="btnYellow" stylesheets="@style.css" text="Retour" />
+   <styleClass>
+      <String fx:value="interface3" />
+      <String fx:value="table-view" />
+   </styleClass>
+   <stylesheets>
+      <URL value="@style.css" />
+      <URL value="@style.css" />
+   </stylesheets>
+</AnchorPane>

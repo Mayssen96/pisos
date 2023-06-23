@@ -1,0 +1,76 @@
+.root {
+    -fx-background-image: url('../images/Blog.jpg');
+    -fx-background-size: cover;
+
+    
+}
+.btnYellow{
+    -fx-background-color:#ffff00;
+    -fx-text-fill: #000000;
+    -fx-cursor:hand ;
+}
+.label{
+    -fx-text-fill:white;
+    
+}
+.interface2{
+    -fx-background-image: url('../images/dark.PNG');
+    /*-fx-background-repeat:no-repeat;*/
+    -fx-background-size: cover; 
+}*.interface3{
+    -fx-background-image: url('../images/rate.jpg');
+    /*-fx-background-repeat:no-repeat;*/
+    -fx-background-size: cover; 
+}
+.combo-box-transparent:hover {
+    -fx-background-color: #ffff00;
+}
+.combo-box-transparent .text {
+    -fx-fill: rgb(200.0, 200.0, 200.0);
+    -fx-background-color:transparent;
+    -fx-text-fill: white ;
+     -fx-font-weight: bold;
+}
+.combo-box {
+    -fx-fill: white;
+    -fx-background-color:rgba(0, 0, 0, 0);
+    -fx-text-fill: white ;
+    
+}
+     
+.table-view .column-header-background{
+        -fx-background-color:#ffff00;
+    }
+.table-view .column-header, .table-view .filler{
+        -fx-size:20px;
+        /*-fx-border-width: 0 0 10 0;*/
+        -fx-background-color:transparent;
+        
+    }
+    
+.table-view .column-header .label {
+     -fx-text-fill: black;
+    }
+    
+    .table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+}
+
+.table-cell {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    
+}
+.table-row-cell:hover .table-cell {
+    -fx-background-color:yellow;
+}
+.table-view .table-row-cell:hover .table-cell {
+    -fx-background-color: yellow;
+    -fx-text-fill: black;
+}
